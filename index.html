@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Silly Stitches — Handmade crochet and embroidery crafts, made with love." />
+  <title>Silly Stitches — Handmade with Love</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Favicon emoji fallback -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧵</text></svg>" />
+</head>
+<body>
+
+  <!-- ============================
+       NAVIGATION
+       ============================ -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="navbar-inner">
+
+      <!-- Logo -->
+      <a href="index.html" class="navbar-logo" aria-label="Silly Stitches Home">
+        <div class="logo-icon">🧵</div>
+        <span class="logo-text">Silly Stitches</span>
+      </a>
+
+      <!-- Nav links -->
+      <ul class="navbar-links" id="navLinks">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="order.html" class="navbar-cta">Order Now ✦</a></li>
+      </ul>
+
+      <!-- Mobile toggle button -->
+      <button class="navbar-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+  </nav>
+
+
+  <!-- ============================
+       HERO SECTION
+       ============================ -->
+  <section class="hero" aria-label="Hero banner">
+    <div class="hero-inner">
+
+      <!-- Left: text content -->
+      <div class="hero-content">
+        <div class="hero-badge">🌿 Small batch · Made by hand</div>
+
+        <h1 class="hero-title">
+          Crafted with care,<br>
+          stitched with <em>love</em>
+        </h1>
+
+        <p class="hero-tagline">
+          Handmade crochet, embroidery, and textile art — each piece is one of a kind,
+          made slowly and with intention.
+        </p>
+
+        <div class="hero-actions">
+          <a href="shop.html" class="btn btn-primary">Browse the Shop</a>
+          <a href="#about" class="btn btn-secondary">Our Story</a>
+        </div>
+      </div>
+
+      <!-- Right: image -->
+      <div class="hero-visual">
+        <div class="hero-image-wrap">
+          <!--
+            REPLACE IMAGE: swap src below with your hero image.
+            Recommended size: 800×1000px, warm/natural tones.
+          -->
+          <img
+            src="https://images.unsplash.com/photo-1612521564730-62fc7691cd85?w=800&q=80"
+            alt="A cozy flat-lay of handmade crochet items in soft warm tones"
+            loading="eager"
+          />
+        </div>
+
+        <!-- Floating accent badge -->
+        <div class="hero-accent-card">
+          <span class="accent-icon">🧶</span>
+          <div>
+            <strong style="color: var(--text-dark); display:block; font-size:0.9rem;">100% Handmade</strong>
+            <span>No two pieces alike</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================
+       PERKS STRIP
+       ============================ -->
+  <div class="perks-strip" aria-label="Store highlights">
+    <div class="perks-inner">
+      <div class="perk-item">
+        <span class="perk-icon">🎁</span>
+        <span>Gift wrapping available</span>
+      </div>
+      <div class="perk-item">
+        <span class="perk-icon">✉️</span>
+        <span>Ships worldwide</span>
+      </div>
+      <div class="perk-item">
+        <span class="perk-icon">🌱</span>
+        <span>Sustainable materials</span>
+      </div>
+      <div class="perk-item">
+        <span class="perk-icon">💌</span>
+        <span>Custom orders welcome</span>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ============================
+       FEATURED PRODUCTS
+       ============================ -->
+  <section class="section featured" aria-labelledby="featured-title">
+    <div class="container">
+
+      <div class="section-header">
+        <h2 class="section-title" id="featured-title">✦ Featured Pieces</h2>
+        <p class="section-subtitle">A few of our most loved creations this season</p>
+      </div>
+
+      <div class="featured-grid">
+
+        <!--
+          =============================================
+          PRODUCT CARD — Easy to copy & edit!
+          To add a product: copy one card block below.
+          To edit: change name, price, description, img.
+          =============================================
+        -->
+
+        <!-- Product Card 1 -->
+        <article class="product-card reveal">
+          <div class="product-image">
+            <span class="product-badge">New</span>
+            <!--
+              REPLACE IMAGE: swap src with your product photo.
+              Recommended: square crop, 600×600px minimum.
+            -->
+            <img
+              src="https://images.unsplash.com/photo-1602081957921-9137a5d6eaee?w=600&q=80"
+              alt="Sunflower crochet coaster set"
+              loading="lazy"
+            />
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Sunflower Coaster Set</h3>
+            <p class="product-desc">A set of 4 sunshine-yellow crochet coasters — perfect for brightening any table.</p>
+            <div class="product-footer">
+              <span class="product-price">$18.00</span>
+              <a href="order.html?product=Sunflower+Coaster+Set" class="btn btn-outline product-order-btn">Order</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product Card 2 -->
+        <article class="product-card reveal">
+          <div class="product-image">
+            <!--
+              REPLACE IMAGE: swap src with your product photo.
+            -->
+            <img
+              src="https://images.unsplash.com/photo-1585232350009-bd80026bc09f?w=600&q=80"
+              alt="Cozy cream crochet market bag"
+              loading="lazy"
+            />
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Cream Market Bag</h3>
+            <p class="product-desc">A roomy, boho-style crochet bag in natural cotton. Folds flat for easy storage.</p>
+            <div class="product-footer">
+              <span class="product-price">$34.00</span>
+              <a href="order.html?product=Cream+Market+Bag" class="btn btn-outline product-order-btn">Order</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product Card 3 -->
+        <article class="product-card reveal">
+          <div class="product-image">
+            <span class="product-badge">Bestseller</span>
+            <!--
+              REPLACE IMAGE: swap src with your product photo.
+            -->
+            <img
+              src="https://images.unsplash.com/photo-1584646098378-0f46c2a3e2b7?w=600&q=80"
+              alt="Embroidered linen hoop art"
+              loading="lazy"
+            />
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Wildflower Hoop Art</h3>
+            <p class="product-desc">Hand-embroidered botanical art on linen, mounted in a natural wooden hoop. Ready to hang.</p>
+            <div class="product-footer">
+              <span class="product-price">$42.00</span>
+              <a href="order.html?product=Wildflower+Hoop+Art" class="btn btn-outline product-order-btn">Order</a>
+            </div>
+          </div>
+        </article>
+
+      </div><!-- /.featured-grid -->
+
+      <div style="text-align:center; margin-top: 48px;">
+        <a href="shop.html" class="btn btn-primary">View All Products →</a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================
+       ABOUT SECTION
+       ============================ -->
+  <section class="section about" id="about" aria-labelledby="about-title">
+    <div class="container">
+      <div class="about-inner">
+
+        <!-- About image -->
+        <div class="about-image-wrap reveal">
+          <!--
+            REPLACE IMAGE: swap src with a photo of you crafting,
+            your workspace, or a cozy detail shot.
+            Recommended: 800×600px, warm lighting.
+          -->
+          <img
+            src="https://images.unsplash.com/photo-1606722590583-6951b5ea92ad?w=800&q=80"
+            alt="Hands working on a crochet project with colourful yarn"
+            loading="lazy"
+          />
+        </div>
+
+        <!-- About text -->
+        <div class="about-content reveal">
+          <h2 class="section-title" id="about-title">Hello, I'm so glad<br>you're <em class="display-font" style="color:var(--red-muted); font-style:italic;">here</em></h2>
+          <p>
+            Silly Stitches started in a tiny flat, with a single crochet hook, a ball of dusty-pink yarn,
+            and a lot of patience. What began as a way to slow down turned into a quiet passion —
+            and eventually, a little shop.
+          </p>
+          <p>
+            Every piece I make is worked by hand, stitch by stitch. I source soft, natural fibres
+            and take my time with every project. No rush. No mass production. Just honest, cozy craft.
+          </p>
+          <p>
+            Thank you for supporting handmade. It truly means the world. 🌿
+          </p>
+          <!-- Replace with your actual name -->
+          <p class="about-signature">— Emma x</p>
+          <a href="order.html" class="btn btn-primary" style="margin-top: 8px; align-self: flex-start;">Request a Custom Piece</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================
+       FOOTER
+       ============================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-inner">
+
+      <!-- Brand column -->
+      <div class="footer-brand">
+        <span class="logo-text display-font">Silly Stitches</span>
+        <p>Slow-made, handcrafted textile goods made with love in a cozy little studio.
+          Every purchase supports independent craft.</p>
+      </div>
+
+      <!-- Navigation column -->
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="order.html">Place an Order</a></li>
+        </ul>
+      </div>
+
+      <!-- Info column -->
+      <div class="footer-col">
+        <h4>Info</h4>
+        <ul>
+          <!-- REPLACE: update these links/emails with your real info -->
+          <li><a href="mailto:hello@sillystitches.com">hello@sillystitches.com</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Pinterest</a></li>
+          <li><a href="#">Care & Returns</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2025 Silly Stitches. All rights reserved.</span>
+      <span>Made with <span class="footer-heart">♥</span> by hand</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

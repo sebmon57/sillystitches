@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Silly Stitches Shop — Browse all handmade crochet, embroidery, and textile pieces." />
+  <title>Shop — Silly Stitches</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧵</text></svg>" />
+</head>
+<body>
+
+  <!-- ============================
+       NAVIGATION
+       ============================ -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="navbar-inner">
+
+      <a href="index.html" class="navbar-logo" aria-label="Silly Stitches Home">
+        <div class="logo-icon">🧵</div>
+        <span class="logo-text">Silly Stitches</span>
+      </a>
+
+      <ul class="navbar-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html" class="active">Shop</a></li>
+        <li><a href="order.html" class="navbar-cta">Order Now ✦</a></li>
+      </ul>
+
+      <button class="navbar-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+  </nav>
+
+
+  <!-- ============================
+       PAGE HERO
+       ============================ -->
+  <header class="page-hero">
+    <h1 class="section-title">The Shop ✦</h1>
+    <p>Browse every handmade piece — each one stitched with patience and care.</p>
+  </header>
+
+
+  <!-- ============================
+       SHOP GRID
+       ============================ -->
+  <section class="shop-section" aria-labelledby="shop-title">
+    <div class="container">
+
+      <!-- Visual filter buttons (decorative for static site — no JS filtering) -->
+      <div class="shop-filter" role="group" aria-label="Product categories">
+        <button class="filter-btn active">All</button>
+        <button class="filter-btn">Coasters</button>
+        <button class="filter-btn">Bags</button>
+        <button class="filter-btn">Wall Art</button>
+        <button class="filter-btn">Accessories</button>
+        <button class="filter-btn">Gifts</button>
+      </div>
+
+      <div class="shop-grid">
+
+        <!--
+          =============================================
+          HOW TO ADD / EDIT PRODUCTS:
+          ─────────────────────────────────────────────
+          1. Copy any <article class="product-card"> block.
+          2. Paste it into this grid.
+          3. Edit: product name, price, description, image src.
+          4. Remove <span class="product-badge"> if no badge needed.
+          5. Update the href on the Order button to pre-fill
+             the product name:
+             order.html?product=Your+Product+Name
+          =============================================
+        -->
+
+
+        <!-- ── PRODUCT 1 ── -->
+        <article class="product-card reveal">
+          <div class="product-image">
+            <span class="product-badge">New</span>
+            <!--
+              REPLACE IMAGE: product photo, square recommended (600×600px)
+            -->
+            <img
+              src="https://images.unsplash.com/photo-1602081957921-9137a5d6eaee?w=600&q=80"
+              alt="Sunflower crochet coaster set on a wooden surface"
+              loading="lazy"
+            />
+          </div>
+          <div class="product-info">
+            <h2 class="product-name">Sunflower Coaster Set</h2>
+            <p class="product-desc">A set of 4 sunshine-yellow crochet coasters. Bright, cheerful, and fully washable.</p>
+            <div class="product-footer">
+              <span class="product-price">$18.00</span>
+              <a href="order.html?product=Sunflower+Coaster+Set" class="btn btn-outline product-order-btn">Order</a>
+            </div>
+          </div>
+        </article>
+
+
+        <!-- ── PRODUCT 2 ── -->
+        <article class="product-card reveal">
+          <div class="product-image">
+            <!--
+              REPLACE IMAGE: product photo
+            -->
+            <img
+              src="https://images.unsplash.com/photo-1585232350009-bd80026bc09f?w=600&q=80"
+              alt="Cream crochet market bag lying on a linen cloth"
+              loading="lazy"
+            />
+          </div>
+          <div class="product-info">
+            <h2 class="product-name">Cream Market Bag</h2>
+            <p class="product-desc">A roomy, boho-style bag in natural cotton. Folds flat. Holds a whole farmer's market haul.</p>
+            <div class="product-footer">
+              <span class="product-price">$34.00</span>
+              <a href="order.html?product=Cream+Market+Bag" class="btn btn-outline product-order-btn">Order</a>
+            </div>
+          </div>
+        </article>
+
+
+        <!-- ── PRODUCT 3 ── -->
+        <article class="product-card reveal">
+          <div class="product-image">
+            <span class="product-badge">Bestseller</span>
+            <!--
+              REPLACE IMAGE: product photo
+            -->
+            <img
+              src="https://images.unsplash.com/photo-1584646098378-0f46c2a3e2b7?w=600&q=80"
+              alt="Wildflower hand-embroidered hoop art"
+              loading="lazy"
+            />
+          </div>
+          <div class="product-info">
+            <h2 class="product-name">Wildflower Hoop Art</h2>
+            <p class="product-desc">Hand-embroidered botanical art on linen in a natural wooden hoop. Ready to hang.</p>
+            <div class="product-footer">
+              <span class="product-price">$42.00</span>
+              <a href="order.html?product=Wildflower+Hoop+Art" class="btn btn-outline product-order-btn">Order</a>
+            </div>
+          </div>
+        </article>
+
+
+        <!-- ── PRODUCT 4 ── -->
+        <article class="product-card reveal">
+          <div class="product-image">
+            <!--
+              REPLACE IMAGE: product photo
+            -->
+            <img
+              src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=600&q=80"
+              alt="Soft pink crochet plant pot cover"
+              loading="lazy"
+            />
+          </div>
+          <div class="product-info">
+            <h2 class="product-name">Blush Plant Pot Cover</h2>
+            <p class="product-desc">A textured crochet cover for a 10–12cm pot. Soft blush pink in 100% cotton.</p>
+            <div class="product-footer">
+              <span class="product-price">$22.00</span>
+              <a href="order.html?product=Blush+Plant+Pot+Cover" class="btn btn-outline product-order-btn">Order</a>
+            </div>
+          </div>
+        </article>
+
+
+        <!-- ── PRODUCT 5 ── -->
+        <article class="product-card reveal">
+          <div class="product-image">
+            <span class="product-badge">Limited</span>
+            <!--
+              REPLACE IMAGE: product photo
+            -->
+            <img
+              src="https://images.unsplash.com/photo-1559521783-1d1599583485?w=600&q=80"
+              alt="Embroidered cotton tea towel with floral motif"
+              loading="lazy"
+            />
+          </div>
+          <div class="product-info">
+            <h2 class="product-name">Floral Tea Towel</h2>
+            <p class="product-desc">Hand-embroidered cotton tea towel with a delicate rose motif. A kitchen heirloom.</p>
+            <div class="product-footer">
+              <span class="product-price">$28.00</span>
+              <a href="order.html?product=Floral+Tea+Towel" class="btn btn-outline product-order-btn">Order</a>
+            </div>
+          </div>
+        </article>
+
+
+        <!-- ── PRODUCT 6 ── -->
+        <article class="product-card reveal">
+          <div class="product-image">
+            <!--
+              REPLACE IMAGE: product photo
+            -->
+            <img
+              src="https://images.unsplash.com/photo-1608501078713-8e445a709b39?w=600&q=80"
+              alt="Chunky knit bookmark in warm terracotta"
+              loading="lazy"
+            />
+          </div>
+          <div class="product-info">
+            <h2 class="product-name">Terracotta Bookmark</h2>
+            <p class="product-desc">A chunky crochet bookmark with a little tassel. The perfect reader's companion.</p>
+            <div class="product-footer">
+              <span class="product-price">$8.00</span>
+              <a href="order.html?product=Terracotta+Bookmark" class="btn btn-outline product-order-btn">Order</a>
+            </div>
+          </div>
+        </article>
+
+
+        <!-- ── PRODUCT 7 ── -->
+        <article class="product-card reveal">
+          <div class="product-image">
+            <!--
+              REPLACE IMAGE: product photo
+            -->
+            <img
+              src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600&q=80"
+              alt="Round braided jute table mat"
+              loading="lazy"
+            />
+          </div>
+          <div class="product-info">
+            <h2 class="product-name">Jute Table Mat</h2>
+            <p class="product-desc">Hand-braided jute table mat, round 30cm. Earthy and sturdy — built to last.</p>
+            <div class="product-footer">
+              <span class="product-price">$16.00</span>
+              <a href="order.html?product=Jute+Table+Mat" class="btn btn-outline product-order-btn">Order</a>
+            </div>
+          </div>
+        </article>
+
+
+        <!-- ── PRODUCT 8 ── -->
+        <article class="product-card reveal">
+          <div class="product-image">
+            <span class="product-badge">Popular</span>
+            <!--
+              REPLACE IMAGE: product photo
+            -->
+            <img
+              src="https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=600&q=80"
+              alt="Mini crochet mushroom keychain"
+              loading="lazy"
+            />
+          </div>
+          <div class="product-info">
+            <h2 class="product-name">Mushroom Keychain</h2>
+            <p class="product-desc">A teeny-tiny crochet mushroom amigurumi keychain. Cottagecore in your pocket.</p>
+            <div class="product-footer">
+              <span class="product-price">$12.00</span>
+              <a href="order.html?product=Mushroom+Keychain" class="btn btn-outline product-order-btn">Order</a>
+            </div>
+          </div>
+        </article>
+
+
+        <!-- ── PRODUCT 9 ── -->
+        <article class="product-card reveal">
+          <div class="product-image">
+            <!--
+              REPLACE IMAGE: product photo
+            -->
+            <img
+              src="https://images.unsplash.com/photo-1545389336-cf090694435e?w=600&q=80"
+              alt="Custom embroidered name hoop"
+              loading="lazy"
+            />
+          </div>
+          <div class="product-info">
+            <h2 class="product-name">Custom Name Hoop</h2>
+            <p class="product-desc">A personalised embroidered name hoop in your chosen colours. Makes an incredible gift.</p>
+            <div class="product-footer">
+              <span class="product-price">From $38.00</span>
+              <a href="order.html?product=Custom+Name+Hoop" class="btn btn-outline product-order-btn">Order</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ──────────────────────────────────────────
+             ADD MORE PRODUCTS HERE by copying a card block above!
+             ────────────────────────────────────────── -->
+
+      </div><!-- /.shop-grid -->
+
+      <!-- Custom order callout -->
+      <div style="
+        margin-top: 64px;
+        background: var(--pink-soft);
+        border: 1.5px solid var(--pink-mid);
+        border-radius: var(--radius-lg);
+        padding: 44px 48px;
+        text-align: center;
+        max-width: 640px;
+        margin-left: auto;
+        margin-right: auto;
+      ">
+        <p style="font-size: 1.5rem; margin-bottom: 8px;">💌</p>
+        <h2 style="font-family: var(--font-display); font-size: 1.5rem; color: var(--text-dark); margin-bottom: 12px;">
+          Don't see what you're looking for?
+        </h2>
+        <p style="color: var(--text-mid); font-weight: 500; margin-bottom: 28px; font-size: 0.97rem;">
+          I love custom orders! Tell me your colours, size, and vision — I'll bring it to life.
+        </p>
+        <a href="order.html" class="btn btn-primary">Request a Custom Order</a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================
+       FOOTER
+       ============================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-inner">
+
+      <div class="footer-brand">
+        <span class="logo-text display-font">Silly Stitches</span>
+        <p>Slow-made, handcrafted textile goods made with love in a cozy little studio.
+          Every purchase supports independent craft.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="order.html">Place an Order</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Info</h4>
+        <ul>
+          <!-- REPLACE: update with your real contact info -->
+          <li><a href="mailto:hello@sillystitches.com">hello@sillystitches.com</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Pinterest</a></li>
+          <li><a href="#">Care & Returns</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2025 Silly Stitches. All rights reserved.</span>
+      <span>Made with <span class="footer-heart">♥</span> by hand</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

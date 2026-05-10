@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Place an order with Silly Stitches — handmade crochet and embroidery." />
+  <title>Order — Silly Stitches</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧵</text></svg>" />
+</head>
+<body>
+
+  <!-- ============================
+       NAVIGATION
+       ============================ -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="navbar-inner">
+
+      <a href="index.html" class="navbar-logo" aria-label="Silly Stitches Home">
+        <div class="logo-icon">🧵</div>
+        <span class="logo-text">Silly Stitches</span>
+      </a>
+
+      <ul class="navbar-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="order.html" class="active navbar-cta">Order Now ✦</a></li>
+      </ul>
+
+      <button class="navbar-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+  </nav>
+
+
+  <!-- ============================
+       PAGE HERO
+       ============================ -->
+  <header class="page-hero">
+    <h1 class="section-title">Place an Order ✦</h1>
+    <p>Fill in the form below and I'll be in touch within 1–2 business days to confirm your order.</p>
+  </header>
+
+
+  <!-- ============================
+       ORDER SECTION
+       ============================ -->
+  <section class="order-section" aria-labelledby="order-title">
+    <div class="container">
+      <div class="order-layout">
+
+        <!-- ── ORDER FORM ── -->
+        <div class="order-form-card">
+          <h2 id="order-title">Your Order Details</h2>
+          <p class="form-tagline">All fields marked with ✦ are required.</p>
+
+          <!--
+            FORM: submits via POST to /api/order (handled by Cloudflare Worker)
+            Data is sent as application/x-www-form-urlencoded (standard HTML form)
+            DO NOT change method or action without updating the Worker too.
+          -->
+          <form
+            id="orderForm"
+            method="POST"
+            action="/api/order"
+            novalidate
+          >
+
+            <!-- Name -->
+            <div class="form-group">
+              <label class="form-label" for="name">
+                Your Name <span class="required-star">✦</span>
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="form-input"
+                placeholder="e.g. Sarah Mitchell"
+                required
+                autocomplete="name"
+              />
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+              <label class="form-label" for="email">
+                Email Address <span class="required-star">✦</span>
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="form-input"
+                placeholder="you@example.com"
+                required
+                autocomplete="email"
+              />
+              <p class="form-hint">I'll reply to this address to confirm your order.</p>
+            </div>
+
+            <!-- Product name & quantity row -->
+            <div class="form-row">
+
+              <!-- Product -->
+              <div class="form-group" style="margin-bottom:0">
+                <label class="form-label" for="product">
+                  Product <span class="required-star">✦</span>
+                </label>
+                <div class="select-wrap">
+                  <select
+                    id="product"
+                    name="product"
+                    class="form-select"
+                    required
+                  >
+                    <option value="" disabled selected>Choose a product…</option>
+                    <!--
+                      EDIT PRODUCTS: Add or remove <option> entries here
+                      to match the products in your shop.
+                    -->
+                    <option value="Sunflower Coaster Set">Sunflower Coaster Set — $18</option>
+                    <option value="Cream Market Bag">Cream Market Bag — $34</option>
+                    <option value="Wildflower Hoop Art">Wildflower Hoop Art — $42</option>
+                    <option value="Blush Plant Pot Cover">Blush Plant Pot Cover — $22</option>
+                    <option value="Floral Tea Towel">Floral Tea Towel — $28</option>
+                    <option value="Terracotta Bookmark">Terracotta Bookmark — $8</option>
+                    <option value="Jute Table Mat">Jute Table Mat — $16</option>
+                    <option value="Mushroom Keychain">Mushroom Keychain — $12</option>
+                    <option value="Custom Name Hoop">Custom Name Hoop — from $38</option>
+                    <option value="Custom Order">Something else (describe below)</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Quantity -->
+              <div class="form-group" style="margin-bottom:0">
+                <label class="form-label" for="quantity">
+                  Quantity <span class="required-star">✦</span>
+                </label>
+                <input
+                  type="number"
+                  id="quantity"
+                  name="quantity"
+                  class="form-input"
+                  value="1"
+                  min="1"
+                  max="20"
+                  required
+                />
+              </div>
+
+            </div><!-- /.form-row -->
+
+            <!-- Notes -->
+            <div class="form-group" style="margin-top: 24px;">
+              <label class="form-label" for="notes">
+                Additional Notes
+              </label>
+              <textarea
+                id="notes"
+                name="notes"
+                class="form-textarea"
+                placeholder="Custom colours, size preferences, who it's for, delivery deadline, or anything else you'd like me to know…"
+              ></textarea>
+              <p class="form-hint">For custom orders, please describe your vision here!</p>
+            </div>
+
+            <!-- Submit -->
+            <button type="submit" class="btn btn-primary form-submit" id="submitBtn">
+              Send My Order ✦
+            </button>
+
+            <!-- Success / Error messages (shown by JS) -->
+            <div class="form-message success" id="successMsg" role="alert">
+              🎉 Order sent! I'll be in touch within 1–2 days to confirm everything.
+            </div>
+            <div class="form-message error" id="errorMsg" role="alert">
+              😔 Something went wrong. Please email me directly at <strong>hello@sillystitches.com</strong>.
+            </div>
+
+          </form>
+        </div><!-- /.order-form-card -->
+
+
+        <!-- ── SIDEBAR ── -->
+        <aside class="order-sidebar" aria-label="Order information">
+
+          <!-- Processing info -->
+          <div class="sidebar-card">
+            <h3>🕐 How it works</h3>
+            <ul class="sidebar-list">
+              <li>Fill in the form and submit your request.</li>
+              <li>I'll email you within 1–2 business days to confirm the details and agree on payment.</li>
+              <li>Once confirmed, I'll begin your order! Lead time is 1–2 weeks depending on complexity.</li>
+              <li>I'll send a photo before shipping so you can approve the finished piece.</li>
+            </ul>
+          </div>
+
+          <!-- Shipping info -->
+          <div class="sidebar-card">
+            <h3>📦 Shipping</h3>
+            <ul class="sidebar-list">
+              <li>Ships worldwide from the UK via Royal Mail.</li>
+              <li>Domestic: 3–5 business days.</li>
+              <li>International: 10–21 business days.</li>
+              <li>All orders are carefully packaged in recycled materials.</li>
+            </ul>
+          </div>
+
+          <!-- Highlight -->
+          <div class="sidebar-card sidebar-highlight">
+            <p>
+              💌 Every order comes with a handwritten note and a little surprise. Because you deserve it.
+            </p>
+          </div>
+
+          <!-- Questions -->
+          <div class="sidebar-card">
+            <h3>❓ Questions?</h3>
+            <ul class="sidebar-list">
+              <!-- REPLACE: update with your real email -->
+              <li>Email me at <a href="mailto:hello@sillystitches.com" style="color: var(--red-muted); font-weight: 700;">hello@sillystitches.com</a></li>
+              <li>Or DM me on <a href="#" style="color: var(--red-muted); font-weight: 700;">Instagram</a>.</li>
+            </ul>
+          </div>
+
+        </aside><!-- /.order-sidebar -->
+
+      </div><!-- /.order-layout -->
+    </div>
+  </section>
+
+
+  <!-- ============================
+       FOOTER
+       ============================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-inner">
+
+      <div class="footer-brand">
+        <span class="logo-text display-font">Silly Stitches</span>
+        <p>Slow-made, handcrafted textile goods made with love in a cozy little studio.
+          Every purchase supports independent craft.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="order.html">Place an Order</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Info</h4>
+        <ul>
+          <!-- REPLACE: update with your real info -->
+          <li><a href="mailto:hello@sillystitches.com">hello@sillystitches.com</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Pinterest</a></li>
+          <li><a href="#">Care & Returns</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2025 Silly Stitches. All rights reserved.</span>
+      <span>Made with <span class="footer-heart">♥</span> by hand</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
